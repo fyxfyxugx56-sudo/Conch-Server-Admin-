@@ -1,5 +1,5 @@
 --[[
-DELTA HUB SYSTEM - VERSÃO CONCH STYLE
+DELTA HUB SYSTEM - VERSÃO CONCH 7STYLE
 --]]
 
 local l_Players = game:GetService("Players")
