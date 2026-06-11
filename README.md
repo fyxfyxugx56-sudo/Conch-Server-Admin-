@@ -24,8 +24,8 @@ local CONFIG = {
 }
 
 local COMMANDS = {
-    {name = "aimbot", info = "<força (0.1 a 10)>", desc = "Faz sua mira ir automaticamente para os inimigos"},
-    {name = "farm", info = "(ativa/desativa)", desc = "Coleta moedas e itens automaticamente"},
+    {name = "aimbot", info = "força (0.1 a 10", desc = "Faz sua mira ir automaticamente para os inimigos"},
+    {name = "farm", info = "ativa/desativa", desc = "Coleta moedas e itens automaticamente"},
     {name = "teleport", info = "<player / 'spawn'>", desc = "Teletransporta para um jogador ou spawn"},
     {name = "speed", info = "<valor numérico>", desc = "Altera sua velocidade de movimento"},
     {name = "size", info = "<valor numérico (ex: 2)>", desc = "Altera o tamanho do seu personagem"},
