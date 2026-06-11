@@ -504,8 +504,8 @@ end
 
 local function showInfo()
     addLog("Conch 0.2.x", Color3.fromRGB(255,255,255))
-    addLog("Copyright (c) alicesays_hallo - Licensed under MIT", Color3.fromRGB(255,255,255))
-    addLog("Comandos disponíveis: " .. #COMMANDS, Color3.fromRGB(232,183,54))
+    addLog("Copyright (c) alicesays_hallo - This project  is  licensed  under  MIT,  you  can  view  the  included  license  with 'license'", Color3.fromRGB(255,255,255))
+    addLog("you got here accidentally,  run the 'close-ui' command to close this UI. " .. #COMMANDS, Color3.fromRGB(232,183,54))
 end
 showInfo()
 
