@@ -1,5 +1,5 @@
 --[[
-DELTA HUB SYSTEM - VERSÃO CONCH 7STYLE
+DELTA HUB SYSTEM - VERSÃO CONCH STYLE
 --]]
 
 local l_Players = game:GetService("Players")
@@ -24,69 +24,69 @@ local CONFIG = {
 }
 
 local COMMANDS = {
-    {name = "aimbot", info = "<força (0.1 a 10)>"},
-    {name = "farm", info = "(ativa/desativa)"},
-    {name = "teleport", info = "<player / 'spawn'>"},
-    {name = "speed", info = "<valor numérico>"},
-    {name = "size", info = "<valor numérico (ex: 2)>"},
-    {name = "godmode", info = "(vida infinita)"},
-    {name = "fly", info = "(voar pelo mapa)"},
-    {name = "esp", info = "(ver players + nomes em vermelho)"},
-    {name = "espnpc", info = "(ver NPCs + nomes em vermelho)"},
-    {name = "spin", info = "<velocidade>"},
-    {name = "jumppower", info = "<valor numérico>"},
-    {name = "gravity", info = "<valor da gravidade>"},
-    {name = "noclip", info = "(atravessar paredes)"},
-    {name = "clip", info = "(reativar colisões)"},
-    {name = "infinitejump", info = "(pulos infinitos)"},
-    {name = "invisible", info = "(ficar invisível)"},
-    {name = "rejoin", info = "(reconectar ao servidor)"},
-    {name = "reset", info = "(suicídio)"},
-    {name = "kill", info = "(auto-eliminação)"},
-    {name = "btools", info = "(ferramentas btools)"},
-    {name = "freezecam", info = "(travar câmera)"},
-    {name = "unfreezecam", info = "(destravar câmera)"},
-    {name = "clearlogs", info = "(limpar o histórico)"},
-    {name = "heal", info = "(restaurar vida)"},
-    {name = "anti-afk", info = "(evitar desconexão)"},
-    {name = "teleporttools", info = "(ferramenta clique-tp)"},
-    {name = "destroyui", info = "(deletar o hub)"},
-    {name = "close-ui", info = "(fechar aba de comandos)"},
-    {name = "speedhat", info = "(multiplica velocidade por chapéus)"},
-    {name = "ff", info = "(ativa escudo ForceField)"},
-    {name = "unff", info = "(remove escudo ForceField)"},
-    {name = "sit", info = "(faz o personagem sentar)"},
-    {name = "setfps", info = "<valor numérico do FPS>"},
-    {name = "fhov", info = "<valor do FOV da câmera>"},
-    {name = "light", info = "(cria uma lanterna em você)"},
-    {name = "unlight", info = "(remove a lanterna)"},
-    {name = "bighead", info = "(aumenta o tamanho da cabeça)"},
-    {name = "normalhead", info = "(reseta o tamanho da cabeça)"},
-    {name = "jail", info = "<player> (prende em uma caixa)"},
-    {name = "unjail", info = "<player> (remove a caixa)"},
-    {name = "anim", info = "<ID / player / stop> (copia animação)"},
-    {name = "stopanim", info = "(para todas as animações)"},
-    {name = "time", info = "<0-24> (muda a hora do jogo)"},
-    {name = "brightness", info = "<valor> (muda o brilho do ambiente)"},
-    {name = "fog", info = "<valor> (define distância do fog)"},
-    {name = "unfog", info = "(remove o fog)"},
-    {name = "name", info = "<texto> (muda seu nome exibido)"},
-    {name = "chat", info = "<mensagem> (envia chat)"},
-    {name = "zoom", info = "<valor> (distância máxima do zoom)"},
-    {name = "freeze", info = "(congela seu personagem)"},
-    {name = "unfreeze", info = "(descongela seu personagem)"},
-    {name = "platform", info = "(cria plataforma embaixo de você)"},
-    {name = "unplatform", info = "(remove a plataforma)"},
-    {name = "attachcam", info = "<player> (câmera segue player)"},
-    {name = "detachcam", info = "(retorna câmera ao normal)"},
-    {name = "rainbow", info = "(cor do personagem fica colorida)"},
-    {name = "unrainbow", info = "(remove efeito rainbow)"},
-    {name = "nametag", info = "<texto> (cria tag acima da cabeça)"},
-    {name = "removetag", info = "(remove a nametag)"},
-    {name = "annoy", info = "<player> (fica em cima do player)"},
-    {name = "unannoy", info = "(para de seguir o player)"},
-    {name = "reach", info = "<valor> (aumenta alcance da ferramenta)"},
-    {name = "morph", info = "<ID da roupa / player> (copia roupas e acessórios)"},
+    {name = "aimbot", info = "<força (0.1 a 10)>", desc = "Faz sua mira ir automaticamente para os inimigos"},
+    {name = "farm", info = "(ativa/desativa)", desc = "Coleta moedas e itens automaticamente"},
+    {name = "teleport", info = "<player / 'spawn'>", desc = "Teletransporta para um jogador ou spawn"},
+    {name = "speed", info = "<valor numérico>", desc = "Altera sua velocidade de movimento"},
+    {name = "size", info = "<valor numérico (ex: 2)>", desc = "Altera o tamanho do seu personagem"},
+    {name = "godmode", info = "(vida infinita)", desc = "Torna seu personagem invencível"},
+    {name = "fly", info = "(voar pelo mapa)", desc = "Permite voar pelo mapa"},
+    {name = "esp", info = "(ver players + nomes em vermelho)", desc = "Mostra outros jogadores através das paredes"},
+    {name = "espnpc", info = "(ver NPCs + nomes em vermelho)", desc = "Mostra NPCs através das paredes"},
+    {name = "spin", info = "<velocidade>", desc = "Faz seu personagem girar"},
+    {name = "jumppower", info = "<valor numérico>", desc = "Altera a altura do seu pulo"},
+    {name = "gravity", info = "<valor da gravidade>", desc = "Altera a gravidade do jogo"},
+    {name = "noclip", info = "(atravessar paredes)", desc = "Permite atravessar paredes"},
+    {name = "clip", info = "(reativar colisões)", desc = "Reativa as colisões com paredes"},
+    {name = "infinitejump", info = "(pulos infinitos)", desc = "Permite pular infinitas vezes"},
+    {name = "invisible", info = "(ficar invisível)", desc = "Fica invisível para outros jogadores"},
+    {name = "rejoin", info = "(reconectar ao servidor)", desc = "Reconecta ao servidor"},
+    {name = "reset", info = "(suicídio)", desc = "Mata seu personagem"},
+    {name = "kill", info = "(auto-eliminação)", desc = "Mata seu personagem"},
+    {name = "btools", info = "(ferramentas btools)", desc = "Adiciona ferramentas de construção"},
+    {name = "freezecam", info = "(travar câmera)", desc = "Trava a câmera"},
+    {name = "unfreezecam", info = "(destravar câmera)", desc = "Destrava a câmera"},
+    {name = "clearlogs", info = "(limpar o histórico)", desc = "Limpa o histórico de comandos"},
+    {name = "heal", info = "(restaurar vida)", desc = "Restaura toda sua vida"},
+    {name = "anti-afk", info = "(evitar desconexão)", desc = "Evita ser desconectado por inatividade"},
+    {name = "teleporttools", info = "(ferramenta clique-tp)", desc = "Cria ferramenta para teleportar com clique"},
+    {name = "destroyui", info = "(deletar o hub)", desc = "Remove completamente o hub"},
+    {name = "close-ui", info = "(fechar aba de comandos)", desc = "Fecha o painel de comandos"},
+    {name = "speedhat", info = "(multiplica velocidade por chapéus)", desc = "Velocidade aumenta com chapéus"},
+    {name = "ff", info = "(ativa escudo ForceField)", desc = "Cria um escudo de força"},
+    {name = "unff", info = "(remove escudo ForceField)", desc = "Remove o escudo de força"},
+    {name = "sit", info = "(faz o personagem sentar)", desc = "Faz seu personagem sentar"},
+    {name = "setfps", info = "<valor numérico do FPS>", desc = "Limita o FPS do jogo"},
+    {name = "fhov", info = "<valor do FOV da câmera>", desc = "Altera o campo de visão da câmera"},
+    {name = "light", info = "(cria uma lanterna em você)", desc = "Cria uma lanterna no seu personagem"},
+    {name = "unlight", info = "(remove a lanterna)", desc = "Remove a lanterna"},
+    {name = "bighead", info = "(aumenta o tamanho da cabeça)", desc = "Aumenta o tamanho da sua cabeça"},
+    {name = "normalhead", info = "(reseta o tamanho da cabeça)", desc = "Volta o tamanho normal da cabeça"},
+    {name = "jail", info = "<player> (prende em uma caixa)", desc = "Prende um jogador em uma caixa"},
+    {name = "unjail", info = "<player> (remove a caixa)", desc = "Solta um jogador da caixa"},
+    {name = "anim", info = "<ID / player / stop> (copia animação)", desc = "Copia animação de outro jogador ou NPC"},
+    {name = "stopanim", info = "(para todas as animações)", desc = "Para todas as animações ativas"},
+    {name = "time", info = "<0-24> (muda a hora do jogo)", desc = "Muda a hora do jogo"},
+    {name = "brightness", info = "<valor> (muda o brilho do ambiente)", desc = "Muda o brilho do ambiente"},
+    {name = "fog", info = "<valor> (define distância do fog)", desc = "Adiciona neblina no mapa"},
+    {name = "unfog", info = "(remove o fog)", desc = "Remove a neblina"},
+    {name = "name", info = "<texto> (muda seu nome exibido)", desc = "Muda o nome exibido acima da sua cabeça"},
+    {name = "chat", info = "<mensagem> (envia chat)", desc = "Envia mensagem no chat"},
+    {name = "zoom", info = "<valor> (distância máxima do zoom)", desc = "Altera a distância máxima do zoom"},
+    {name = "freeze", info = "(congela seu personagem)", desc = "Congela seu personagem no lugar"},
+    {name = "unfreeze", info = "(descongela seu personagem)", desc = "Descongela seu personagem"},
+    {name = "platform", info = "(cria plataforma embaixo de você)", desc = "Cria uma plataforma embaixo de você"},
+    {name = "unplatform", info = "(remove a plataforma)", desc = "Remove a plataforma"},
+    {name = "attachcam", info = "<player> (câmera segue player)", desc = "Prende a câmera em outro jogador"},
+    {name = "detachcam", info = "(retorna câmera ao normal)", desc = "Solta a câmera de volta"},
+    {name = "rainbow", info = "(cor do personagem fica colorida)", desc = "Seu personagem fica colorido"},
+    {name = "unrainbow", info = "(remove efeito rainbow)", desc = "Remove o efeito colorido"},
+    {name = "nametag", info = "<texto> (cria tag acima da cabeça)", desc = "Cria uma tag flutuante acima da cabeça"},
+    {name = "removetag", info = "(remove a nametag)", desc = "Remove a tag flutuante"},
+    {name = "annoy", info = "<player> (fica em cima do player)", desc = "Fica grudado em cima de outro jogador"},
+    {name = "unannoy", info = "(para de seguir o player)", desc = "Para de grudar"},
+    {name = "reach", info = "<valor> (aumenta alcance da ferramenta)", desc = "Aumenta o alcance da sua ferramenta"},
+    {name = "morph", info = "<ID da roupa / player> (copia roupas e acessórios)", desc = "Copia roupas e acessórios de outro jogador"},
 }
 
 -- VARIÁVEIS
@@ -563,23 +563,20 @@ ScreenGui.Name = "Delta_Conch_Hub"
 ScreenGui.ResetOnSpawn = false
 ScreenGui.DisplayOrder = 999
 ScreenGui.IgnoreGuiInset = true
-ScreenGui.Enabled = true
 
 local ToggleButton = Instance.new("TextButton", ScreenGui)
-ToggleButton.Size = UDim2.new(0, 50, 0, 50)
-ToggleButton.Position = UDim2.new(0, 15, 0, 100)
+ToggleButton.Size = UDim2.new(0, 44, 0, 44)
+ToggleButton.Position = UDim2.new(0, 10, 0, 120)
 ToggleButton.AnchorPoint = Vector2.new(0, 0)
 ToggleButton.BackgroundColor3 = CONFIG.BG_COLOR
-ToggleButton.BackgroundTransparency = 0.15
+ToggleButton.BackgroundTransparency = 0.1
 ToggleButton.Text = ">_"
 ToggleButton.TextColor3 = CONFIG.ACCENT
 ToggleButton.Font = CONFIG.FONT
-ToggleButton.TextSize = 22
-ToggleButton.TextScaled = true
+ToggleButton.TextSize = 18
 ToggleButton.ZIndex = 10
 ToggleButton.Visible = true
-local btnCorner = Instance.new("UICorner", ToggleButton)
-btnCorner.CornerRadius = UDim.new(1, 0)
+Instance.new("UICorner", ToggleButton).CornerRadius = UDim.new(1, 0)
 
 local Container = Instance.new("Frame", ScreenGui)
 Container.Size = UDim2.new(0.98, 0, 0, 0)
@@ -622,7 +619,7 @@ TextBox.TextColor3 = CONFIG.TEXT_NORMAL
 TextBox.Font = CONFIG.FONT
 TextBox.TextSize = 18
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
-TextBox.PlaceholderText = "Digite seu comando aqui..."
+TextBox.PlaceholderText = "Enter your command"
 TextBox.Text = ""
 TextBox.BorderSizePixel = 0
 TextBox.LayoutOrder = 2
@@ -632,13 +629,14 @@ local textPadding = Instance.new("UIPadding", TextBox)
 textPadding.PaddingLeft = UDim.new(0, 14)
 
 local SuggestionFrame = Instance.new("Frame", TextBox)
-SuggestionFrame.Size = UDim2.new(0, 380, 0, 0)
+SuggestionFrame.Size = UDim2.new(0, 500, 0, 0)
 SuggestionFrame.Position = UDim2.new(0, 14, 0, -6)
 SuggestionFrame.AnchorPoint = Vector2.new(0, 1)
 SuggestionFrame.BackgroundColor3 = CONFIG.BG_COLOR
-SuggestionFrame.BackgroundTransparency = 0.1
+SuggestionFrame.BackgroundTransparency = 0.15
 SuggestionFrame.Visible = false
 SuggestionFrame.BorderSizePixel = 0
+Instance.new("UICorner", SuggestionFrame).CornerRadius = UDim.new(0, 6)
 Instance.new("UIListLayout", SuggestionFrame).SortOrder = Enum.SortOrder.LayoutOrder
 
 local function addLog(txt, col)
@@ -655,9 +653,9 @@ local function addLog(txt, col)
 end
 
 local function showInfo()
-    addLog("Delta Conch Hub v1.0", CONFIG.TEXT_NORMAL)
-    addLog("Digite 'close-ui' para fechar ou pressione X", CONFIG.TEXT_YELLOW)
-    addLog("Comandos disponíveis: " .. #COMMANDS, CONFIG.ACCENT)
+    addLog("Conch 0.2.x", CONFIG.TEXT_NORMAL)
+    addLog("Copyright (c) alicesays_hallo - Licensed under MIT, you can view the included license with'license'", CONFIG.TEXT_NORMAL)
+    addLog("Run 'close-ui' command to close this UI.", CONFIG.TEXT_YELLOW)
 end
 
 showInfo()
@@ -682,15 +680,16 @@ end
 TextBox:GetPropertyChangedSignal("Text"):Connect(function()
     if not TextBox.TextEditable then return end
     for _, v in pairs(SuggestionFrame:GetChildren()) do
-        if v:IsA("TextButton") or v:IsA("TextLabel") then v:Destroy() end
+        if v:IsA("Frame") or v:IsA("TextButton") or v:IsA("TextLabel") then v:Destroy() end
     end
     local text = TextBox.Text
     if text == "" then SuggestionFrame.Visible = false return end
-    local newXPosition = 14 + (#text * 10.8)
+    local newXPosition = 14 + (#text * 11)
     SuggestionFrame.Position = UDim2.new(0, newXPosition, 0, -6)
     local args = string.split(text, " ")
     local cmdPart = args[1]:lower()
     local count = 0
+    
     if #args > 1 then
         if cmdPart == "teleport" or cmdPart == "jail" or cmdPart == "unjail" or cmdPart == "annoy" or cmdPart == "attachcam" or cmdPart == "morph" then
             local pNamePart = args[2]:lower()
@@ -698,15 +697,27 @@ TextBox:GetPropertyChangedSignal("Text"):Connect(function()
                 if p.Name:lower():sub(1, #pNamePart) == pNamePart then
                     count = count + 1
                     if count > 6 then break end
-                    local b = Instance.new("TextButton", SuggestionFrame)
-                    b.Size = UDim2.new(1, 0, 0, 28)
-                    b.BackgroundTransparency = 1
-                    b.Text = "  " .. p.Name
-                    b.TextColor3 = CONFIG.TEXT_YELLOW
-                    b.Font = CONFIG.FONT
-                    b.TextSize = 16
-                    b.TextXAlignment = Enum.TextXAlignment.Left
-                    b.MouseButton1Click:Connect(function()
+                    local frame = Instance.new("Frame", SuggestionFrame)
+                    frame.Size = UDim2.new(1, 0, 0, 32)
+                    frame.BackgroundTransparency = 1
+                    
+                    local btn = Instance.new("TextButton", frame)
+                    btn.Size = UDim2.new(1, 0, 1, 0)
+                    btn.BackgroundTransparency = 1
+                    btn.Text = ""
+                    
+                    local playerLabel = Instance.new("TextLabel", frame)
+                    playerLabel.Size = UDim2.new(1, 0, 1, 0)
+                    playerLabel.Position = UDim2.new(0, 8, 0, 0)
+                    playerLabel.BackgroundTransparency = 1
+                    playerLabel.Text = "  " .. p.Name
+                    playerLabel.TextColor3 = CONFIG.TEXT_YELLOW
+                    playerLabel.Font = CONFIG.FONT
+                    playerLabel.TextSize = 18
+                    playerLabel.TextXAlignment = Enum.TextXAlignment.Left
+                    playerLabel.ZIndex = 1
+                    
+                    btn.MouseButton1Click:Connect(function()
                         TextBox.Text = cmdPart .. " " .. p.Name
                         TextBox:CaptureFocus()
                     end)
@@ -718,28 +729,39 @@ TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             if #anims == 0 then
                 count = 1
                 local label = Instance.new("TextLabel", SuggestionFrame)
-                label.Size = UDim2.new(1, 0, 0, 28)
+                label.Size = UDim2.new(1, 0, 0, 32)
                 label.BackgroundTransparency = 1
                 label.Text = "  Nenhuma animação encontrada"
                 label.TextColor3 = Color3.fromRGB(255, 80, 80)
                 label.Font = CONFIG.FONT
-                label.TextSize = 14
+                label.TextSize = 18
                 label.TextXAlignment = Enum.TextXAlignment.Left
             else
                 for _, anim in pairs(anims) do
                     if anim.name:lower():find(searchPart, 1, true) then
                         count = count + 1
                         if count > 8 then break end
-                        local b = Instance.new("TextButton", SuggestionFrame)
-                        b.Size = UDim2.new(1, 0, 0, 28)
-                        b.BackgroundTransparency = 1
-                        b.Text = "  " .. anim.name
-                        b.TextColor3 = CONFIG.TEXT_YELLOW
-                        b.Font = CONFIG.FONT
-                        b.TextSize = 14
-                        b.TextXAlignment = Enum.TextXAlignment.Left
+                        local frame = Instance.new("Frame", SuggestionFrame)
+                        frame.Size = UDim2.new(1, 0, 0, 32)
+                        frame.BackgroundTransparency = 1
+                        
+                        local btn = Instance.new("TextButton", frame)
+                        btn.Size = UDim2.new(1, 0, 1, 0)
+                        btn.BackgroundTransparency = 1
+                        btn.Text = ""
+                        
+                        local animLabel = Instance.new("TextLabel", frame)
+                        animLabel.Size = UDim2.new(1, 0, 1, 0)
+                        animLabel.Position = UDim2.new(0, 8, 0, 0)
+                        animLabel.BackgroundTransparency = 1
+                        animLabel.Text = "  " .. anim.name
+                        animLabel.TextColor3 = CONFIG.TEXT_YELLOW
+                        animLabel.Font = CONFIG.FONT
+                        animLabel.TextSize = 16
+                        animLabel.TextXAlignment = Enum.TextXAlignment.Left
+                        
                         local animId = anim.id
-                        b.MouseButton1Click:Connect(function()
+                        btn.MouseButton1Click:Connect(function()
                             TextBox.Text = "anim " .. animId
                             TextBox:CaptureFocus()
                         end)
@@ -748,32 +770,76 @@ TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             end
         else
             local matchedCmd = nil
-            for _, data in pairs(COMMANDS) do if data.name == cmdPart then matchedCmd = data break end end
+            for _, data in pairs(COMMANDS) do 
+                if data.name == cmdPart then 
+                    matchedCmd = data 
+                    break 
+                end 
+            end
             if matchedCmd then
                 count = 1
-                local label = Instance.new("TextLabel", SuggestionFrame)
-                label.Size = UDim2.new(1, 0, 0, 30)
-                label.BackgroundTransparency = 1
-                label.Text = " " .. matchedCmd.name .. " " .. matchedCmd.info
-                label.TextColor3 = CONFIG.TEXT_YELLOW
-                label.Font = CONFIG.FONT
-                label.TextSize = 16
-                label.TextXAlignment = Enum.TextXAlignment.Left
+                local frame = Instance.new("Frame", SuggestionFrame)
+                frame.Size = UDim2.new(1, 0, 0, 40)
+                frame.BackgroundTransparency = 1
+                
+                local cmdLabel = Instance.new("TextLabel", frame)
+                cmdLabel.Size = UDim2.new(0.4, 0, 1, 0)
+                cmdLabel.Position = UDim2.new(0, 8, 0, 0)
+                cmdLabel.BackgroundTransparency = 1
+                cmdLabel.Text = " " .. matchedCmd.name .. " " .. matchedCmd.info
+                cmdLabel.TextColor3 = CONFIG.ACCENT
+                cmdLabel.Font = CONFIG.FONT
+                cmdLabel.TextSize = 18
+                cmdLabel.TextXAlignment = Enum.TextXAlignment.Left
+                
+                local descLabel = Instance.new("TextLabel", frame)
+                descLabel.Size = UDim2.new(0.55, 0, 1, 0)
+                descLabel.Position = UDim2.new(0.42, 0, 0, 0)
+                descLabel.BackgroundTransparency = 1
+                descLabel.Text = "→ " .. matchedCmd.desc
+                descLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                descLabel.Font = CONFIG.FONT
+                descLabel.TextSize = 18
+                descLabel.TextXAlignment = Enum.TextXAlignment.Left
             end
         end
     else
         for _, data in pairs(COMMANDS) do
             if data.name:sub(1, #cmdPart) == cmdPart and text:lower() ~= data.name then
                 count = count + 1
-                local b = Instance.new("TextButton", SuggestionFrame)
-                b.Size = UDim2.new(1, 0, 0, 28)
-                b.BackgroundTransparency = 1
-                b.Text = "  " .. data.name .. " " .. data.info
-                b.TextColor3 = CONFIG.ACCENT
-                b.Font = CONFIG.FONT
-                b.TextSize = 16
-                b.TextXAlignment = Enum.TextXAlignment.Left
-                b.MouseButton1Click:Connect(function()
+                local frame = Instance.new("Frame", SuggestionFrame)
+                frame.Size = UDim2.new(1, 0, 0, 38)
+                frame.BackgroundTransparency = 1
+                
+                local btn = Instance.new("TextButton", frame)
+                btn.Size = UDim2.new(1, 0, 1, 0)
+                btn.BackgroundTransparency = 1
+                btn.Text = ""
+                btn.ZIndex = 2
+                
+                local cmdLabel = Instance.new("TextLabel", frame)
+                cmdLabel.Size = UDim2.new(0.4, 0, 1, 0)
+                cmdLabel.Position = UDim2.new(0, 8, 0, 0)
+                cmdLabel.BackgroundTransparency = 1
+                cmdLabel.Text = "  " .. data.name .. " " .. data.info
+                cmdLabel.TextColor3 = CONFIG.ACCENT
+                cmdLabel.Font = CONFIG.FONT
+                cmdLabel.TextSize = 18
+                cmdLabel.TextXAlignment = Enum.TextXAlignment.Left
+                cmdLabel.ZIndex = 1
+                
+                local descLabel = Instance.new("TextLabel", frame)
+                descLabel.Size = UDim2.new(0.55, 0, 1, 0)
+                descLabel.Position = UDim2.new(0.42, 0, 0, 0)
+                descLabel.BackgroundTransparency = 1
+                descLabel.Text = "→ " .. data.desc
+                descLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+                descLabel.Font = CONFIG.FONT
+                descLabel.TextSize = 18
+                descLabel.TextXAlignment = Enum.TextXAlignment.Left
+                descLabel.ZIndex = 1
+                
+                btn.MouseButton1Click:Connect(function()
                     TextBox.Text = data.name .. " "
                     TextBox:CaptureFocus()
                 end)
@@ -781,7 +847,7 @@ TextBox:GetPropertyChangedSignal("Text"):Connect(function()
         end
     end
     SuggestionFrame.Visible = (count > 0)
-    SuggestionFrame.Size = UDim2.new(0, 380, 0, count * 30)
+    SuggestionFrame.Size = UDim2.new(0, 580, 0, count * 42)
 end)
 
 -- ==========================================
@@ -790,7 +856,7 @@ end)
 TextBox.FocusLost:Connect(function(enter)
     if enter and TextBox.Text ~= "" then
         local raw = TextBox.Text
-        addLog("> " .. raw, CONFIG.TEXT_NORMAL)
+        addLog(raw, CONFIG.TEXT_NORMAL)
         local args = string.split(raw:gsub("^%s*(.-)%s*$", "%1"), " ")
         local cmdName = args[1]:lower()
         SuggestionFrame.Visible = false
@@ -806,20 +872,20 @@ TextBox.FocusLost:Connect(function(enter)
 
                 if cmdName == "aimbot" then
                     aimbotActive = not aimbotActive
-                    if aimbotActive then enableAimbot(tonumber(args[2]) or 1) addLog('<font color="#00FF00">✓ Aimbot ATIVADO!</font>') else disableAimbot() addLog('<font color="#FF6464">✗ Aimbot DESATIVADO!</font>') end
+                    if aimbotActive then enableAimbot(tonumber(args[2]) or 1) addLog('<font color="#00FF00">Aimbot ATIVADO!</font>') else disableAimbot() addLog('<font color="#FF6464">Aimbot DESATIVADO!</font>') end
 
                 elseif cmdName == "farm" then
                     farmActive = not farmActive
-                    if farmActive then enableFarm() addLog('<font color="#00FF00">✓ Farm ATIVADO!</font>') else disableFarm() addLog('<font color="#FF6464">✗ Farm DESATIVADO!</font>') end
+                    if farmActive then enableFarm() addLog('<font color="#00FF00">Farm ATIVADO!</font>') else disableFarm() addLog('<font color="#FF6464">Farm DESATIVADO!</font>') end
 
                 elseif cmdName == "teleport" then
                     local target = args[2] or "spawn"
                     local success = target:lower() == "spawn" and teleportToSpawn() or teleportToPlayer(target)
-                    if success then addLog('<font color="#00FF00">✓ Teleportado para ' .. target .. '!</font>') else addLog('<font color="#FF6464">✗ Falha ao teleportar!</font>') end
+                    if success then addLog('<font color="#00FF00">Teleportado para ' .. target .. '!</font>') else addLog('<font color="#FF6464">Falha ao teleportar!</font>') end
 
                 elseif cmdName == "speed" then
                     local speed = tonumber(args[2]) or 16
-                    if humanoid then humanoid.WalkSpeed = speed addLog('<font color="#00FF00">✓ Velocidade: ' .. speed .. '</font>') end
+                    if humanoid then humanoid.WalkSpeed = speed addLog('<font color="#00FF00">Velocidade: ' .. speed .. '</font>') end
 
                 elseif cmdName == "size" then
                     local scale = tonumber(args[2]) or 1
@@ -832,39 +898,39 @@ TextBox.FocusLost:Connect(function(enter)
                             desc.ProportionScale = scale
                             desc.WidthScale = scale
                             pcall(function() humanoid:ApplyDescription(desc) end)
-                            addLog('<font color="#00FF00">✓ Tamanho: ' .. scale .. '</font>')
+                            addLog('<font color="#00FF00">Tamanho: ' .. scale .. '</font>')
                         else
-                            addLog('<font color="#FF6464">✗ Falha ao alterar tamanho!</font>')
+                            addLog('<font color="#FF6464">Falha ao alterar tamanho!</font>')
                         end
                     end
 
                 elseif cmdName == "godmode" then
                     godmodeActive = not godmodeActive
-                    if godmodeActive then enableGodmode() addLog('<font color="#00FF00">✓ Godmode ATIVADO!</font>') else disableGodmode() addLog('<font color="#FF6464">✗ Godmode DESATIVADO!</font>') end
+                    if godmodeActive then enableGodmode() addLog('<font color="#00FF00">Godmode ATIVADO!</font>') else disableGodmode() addLog('<font color="#FF6464">Godmode DESATIVADO!</font>') end
 
                 elseif cmdName == "fly" then
                     flyActive = not flyActive
-                    if flyActive then enableFly() addLog('<font color="#00FF00">✓ Fly ATIVADO!</font>') else disableFly() addLog('<font color="#FF6464">✗ Fly DESATIVADO!</font>') end
+                    if flyActive then enableFly() addLog('<font color="#00FF00">Fly ATIVADO!</font>') else disableFly() addLog('<font color="#FF6464">Fly DESATIVADO!</font>') end
 
                 elseif cmdName == "esp" then
                     espActive = not espActive
-                    if espActive then enableESP() addLog('<font color="#FF3232">✓ ESP Players ATIVADO!</font>') else disableESP() addLog('<font color="#FF6464">✗ ESP Players DESATIVADO!</font>') end
+                    if espActive then enableESP() addLog('<font color="#FF3232">ESP Players ATIVADO!</font>') else disableESP() addLog('<font color="#FF6464">ESP Players DESATIVADO!</font>') end
 
                 elseif cmdName == "espnpc" then
                     espNpcActive = not espNpcActive
-                    if espNpcActive then enableNpcESP() addLog('<font color="#FF3232">✓ ESP NPCs ATIVADO!</font>') else disableNpcESP() addLog('<font color="#FF6464">✗ ESP NPCs DESATIVADO!</font>') end
+                    if espNpcActive then enableNpcESP() addLog('<font color="#FF3232">ESP NPCs ATIVADO!</font>') else disableNpcESP() addLog('<font color="#FF6464">ESP NPCs DESATIVADO!</font>') end
 
                 elseif cmdName == "spin" then
                     spinmodeActive = not spinmodeActive
-                    if spinmodeActive then spinSpeed = tonumber(args[2]) or 50 enableSpinmode() addLog('<font color="#00FF00">✓ Spin ATIVADO!</font>') else disableSpinmode() addLog('<font color="#FF6464">✗ Spin DESATIVADO!</font>') end
+                    if spinmodeActive then spinSpeed = tonumber(args[2]) or 50 enableSpinmode() addLog('<font color="#00FF00">Spin ATIVADO!</font>') else disableSpinmode() addLog('<font color="#FF6464">Spin DESATIVADO!</font>') end
 
                 elseif cmdName == "jumppower" then
                     local jp = tonumber(args[2]) or 50
-                    if humanoid then humanoid.JumpPower = jp addLog('<font color="#00FF00">✓ JumpPower: ' .. jp .. '</font>') end
+                    if humanoid then humanoid.JumpPower = jp addLog('<font color="#00FF00">JumpPower: ' .. jp .. '</font>') end
 
                 elseif cmdName == "gravity" then
                     workspace.Gravity = tonumber(args[2]) or 196.2
-                    addLog('<font color="#00FF00">✓ Gravidade: ' .. workspace.Gravity .. '</font>')
+                    addLog('<font color="#00FF00">Gravidade: ' .. workspace.Gravity .. '</font>')
 
                 elseif cmdName == "noclip" then
                     noclipActive = not noclipActive
@@ -876,10 +942,10 @@ TextBox.FocusLost:Connect(function(enter)
                                 end
                             end
                         end)
-                        addLog('<font color="#00FF00">✓ Noclip ATIVADO!</font>')
+                        addLog('<font color="#00FF00">Noclip ATIVADO!</font>')
                     else
                         if noclipConnection then noclipConnection:Disconnect() end
-                        addLog('<font color="#FF6464">✗ Noclip DESATIVADO!</font>')
+                        addLog('<font color="#FF6464">Noclip DESATIVADO!</font>')
                     end
 
                 elseif cmdName == "clip" then
@@ -890,7 +956,7 @@ TextBox.FocusLost:Connect(function(enter)
                             if part:IsA("BasePart") then part.CanCollide = true end
                         end
                     end
-                    addLog('<font color="#00FF00">✓ Colisões restauradas!</font>')
+                    addLog('<font color="#00FF00">Colisões restauradas!</font>')
 
                 elseif cmdName == "infinitejump" then
                     infJumpActive = not infJumpActive
@@ -898,10 +964,10 @@ TextBox.FocusLost:Connect(function(enter)
                         infJumpConnection = l_UserInputService.JumpRequest:Connect(function()
                             if humanoid then humanoid:ChangeState("Jumping") end
                         end)
-                        addLog('<font color="#00FF00">✓ Pulo Infinito ATIVADO!</font>')
+                        addLog('<font color="#00FF00">Pulo Infinito ATIVADO!</font>')
                     else
                         if infJumpConnection then infJumpConnection:Disconnect() end
-                        addLog('<font color="#FF6464">✗ Pulo Infinito DESATIVADO!</font>')
+                        addLog('<font color="#FF6464">Pulo Infinito DESATIVADO!</font>')
                     end
 
                 elseif cmdName == "invisible" then
@@ -911,7 +977,7 @@ TextBox.FocusLost:Connect(function(enter)
                                 part.Transparency = part.Transparency == 1 and 0 or 1
                             end
                         end
-                        addLog('<font color="#00FF00">✓ Invisibilidade alternada!</font>')
+                        addLog('<font color="#00FF00">Invisibilidade alternada!</font>')
                     end
 
                 elseif cmdName == "rejoin" then
@@ -919,22 +985,20 @@ TextBox.FocusLost:Connect(function(enter)
 
                 elseif cmdName == "reset" or cmdName == "kill" then
                     if humanoid then humanoid.Health = 0 end
-                    addLog('<font color="#FF6464">✓ Personagem resetado!</font>')
 
                 elseif cmdName == "btools" then
-                    local backpack = l_LocalPlayer:WaitForChild("Backpack")
-                    Instance.new("HopperBin", backpack).BinType = 1
-                    Instance.new("HopperBin", backpack).BinType = 3
-                    Instance.new("HopperBin", backpack).BinType = 4
-                    addLog('<font color="#00FF00">✓ BTools inseridas!</font>')
+                    Instance.new("HopperBin", l_LocalPlayer:WaitForChild("Backpack")).BinType = 1
+                    Instance.new("HopperBin", l_LocalPlayer:WaitForChild("Backpack")).BinType = 3
+                    Instance.new("HopperBin", l_LocalPlayer:WaitForChild("Backpack")).BinType = 4
+                    addLog('<font color="#00FF00">BTools inseridas!</font>')
 
                 elseif cmdName == "freezecam" then
                     l_Camera.CameraType = Enum.CameraType.Scriptable
-                    addLog('<font color="#FF6464">✓ Câmera travada!</font>')
+                    addLog('<font color="#FF6464">Câmera travada!</font>')
 
                 elseif cmdName == "unfreezecam" then
                     l_Camera.CameraType = Enum.CameraType.Custom
-                    addLog('<font color="#00FF00">✓ Câmera destravada!</font>')
+                    addLog('<font color="#00FF00">Câmera destravada!</font>')
 
                 elseif cmdName == "clearlogs" then
                     for _, child in pairs(LogFrame:GetChildren()) do
@@ -943,7 +1007,7 @@ TextBox.FocusLost:Connect(function(enter)
                     showInfo()
 
                 elseif cmdName == "heal" then
-                    if humanoid then humanoid.Health = humanoid.MaxHealth addLog('<font color="#00FF00">✓ Vida restaurada!</font>') end
+                    if humanoid then humanoid.Health = humanoid.MaxHealth addLog('<font color="#00FF00">Vida restaurada!</font>') end
 
                 elseif cmdName == "anti-afk" then
                     if not antiAfkConnection then
@@ -952,11 +1016,7 @@ TextBox.FocusLost:Connect(function(enter)
                             task.wait(1)
                             game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0), l_Camera.CFrame)
                         end)
-                        addLog('<font color="#00FF00">✓ Anti-AFK ativado!</font>')
-                    else
-                        antiAfkConnection:Disconnect()
-                        antiAfkConnection = nil
-                        addLog('<font color="#FF6464">✗ Anti-AFK desativado!</font>')
+                        addLog('<font color="#00FF00">Anti-AFK ativado!</font>')
                     end
 
                 elseif cmdName == "teleporttools" then
@@ -968,11 +1028,10 @@ TextBox.FocusLost:Connect(function(enter)
                         if l_LocalPlayer.Character then l_LocalPlayer.Character:MoveTo(pos) end
                     end)
                     tool.Parent = l_LocalPlayer.Backpack
-                    addLog('<font color="#00FF00">✓ Ferramenta de clique-tp criada!</font>')
+                    addLog('<font color="#00FF00">Ferramenta de clique-tp criada!</font>')
 
                 elseif cmdName == "destroyui" then
                     ScreenGui:Destroy()
-                    return
 
                 elseif cmdName == "close-ui" then
                     Container.Visible = false
@@ -982,48 +1041,32 @@ TextBox.FocusLost:Connect(function(enter)
                         local hatCount = 0
                         for _, acc in pairs(character:GetChildren()) do if acc:IsA("Accessory") then hatCount = hatCount + 1 end end
                         humanoid.WalkSpeed = 16 + (hatCount * 10)
-                        addLog('<font color="#00FF00">✓ Velocidade: ' .. humanoid.WalkSpeed .. '</font>')
+                        addLog('<font color="#00FF00">Velocidade: ' .. humanoid.WalkSpeed .. '</font>')
                     end
 
                 elseif cmdName == "ff" then
                     if character then
-                        if not character:FindFirstChildOfClass("ForceField") then 
-                            Instance.new("ForceField", character)
-                            addLog('<font color="#00FF00">✓ ForceField gerado!</font>')
-                        else
-                            addLog('<font color="#FF6464">✗ ForceField já ativo!</font>')
-                        end
+                        if not character:FindFirstChildOfClass("ForceField") then Instance.new("ForceField", character) end
+                        addLog('<font color="#00FF00">ForceField gerado!</font>')
                     end
 
                 elseif cmdName == "unff" then
                     if character then
                         local ff = character:FindFirstChildOfClass("ForceField")
-                        if ff then 
-                            ff:Destroy()
-                            addLog('<font color="#FF6464">✓ ForceField removido!</font>')
-                        else
-                            addLog('<font color="#FF6464">✗ Nenhum ForceField ativo!</font>')
-                        end
+                        if ff then ff:Destroy() end
+                        addLog('<font color="#FF6464">ForceField removido!</font>')
                     end
 
                 elseif cmdName == "sit" then
-                    if humanoid then 
-                        humanoid.Sit = not humanoid.Sit
-                        addLog('<font color="#00FF00">✓ Personagem ' .. (humanoid.Sit and "sentado" or "levantado") .. '.</font>')
-                    end
+                    if humanoid then humanoid.Sit = true addLog('<font color="#00FF00">Personagem sentado.</font>') end
 
                 elseif cmdName == "setfps" then
                     local fps = tonumber(args[2]) or 60
-                    if setfpscap then 
-                        setfpscap(fps) 
-                        addLog('<font color="#00FF00">✓ FPS limitado: ' .. fps .. '</font>')
-                    else 
-                        addLog('<font color="#FF6464">✗ Executor sem suporte a FPS cap.</font>') 
-                    end
+                    if setfpscap then setfpscap(fps) addLog('<font color="#00FF00">FPS: ' .. fps .. '</font>') else addLog('<font color="#FF6464">Executor sem suporte.</font>') end
 
                 elseif cmdName == "fhov" then
                     l_Camera.FieldOfView = math.clamp(tonumber(args[2]) or 70, 1, 120)
-                    addLog('<font color="#00FF00">✓ FOV: ' .. l_Camera.FieldOfView .. '</font>')
+                    addLog('<font color="#00FF00">FOV: ' .. l_Camera.FieldOfView .. '</font>')
 
                 elseif cmdName == "light" then
                     if character and character:FindFirstChild("HumanoidRootPart") then
@@ -1034,94 +1077,78 @@ TextBox.FocusLost:Connect(function(enter)
                             light.Range = 40
                             light.Brightness = 3
                             light.Color = CONFIG.ACCENT
-                            addLog('<font color="#00FF00">✓ Luz acoplada!</font>')
-                        else
-                            addLog('<font color="#FF6464">✗ Luz já existe!</font>')
                         end
+                        addLog('<font color="#00FF00">Luz acoplada!</font>')
                     end
 
                 elseif cmdName == "unlight" then
                     if character and character:FindFirstChild("HumanoidRootPart") then
                         local light = character.HumanoidRootPart:FindFirstChild("HubLight")
-                        if light then 
-                            light:Destroy()
-                            addLog('<font color="#FF6464">✓ Luz removida!</font>')
-                        else
-                            addLog('<font color="#FF6464">✗ Nenhuma luz encontrada!</font>')
-                        end
+                        if light then light:Destroy() end
+                        addLog('<font color="#FF6464">Luz removida!</font>')
                     end
 
                 elseif cmdName == "bighead" then
                     if character and character:FindFirstChild("Head") then
-                        local head = character.Head
-                        local mesh = head:FindFirstChildOfClass("SpecialMesh")
-                        if mesh then 
-                            mesh.Scale = Vector3.new(3, 3, 3)
-                        else 
-                            head.Size = Vector3.new(4, 4, 4)
-                        end
-                        addLog('<font color="#00FF00">✓ Cabeça ampliada!</font>')
+                        local mesh = character.Head:FindFirstChildOfClass("SpecialMesh")
+                        if mesh then mesh.Scale = Vector3.new(3, 3, 3) else character.Head.Size = Vector3.new(4, 4, 4) end
+                        addLog('<font color="#00FF00">Cabeça ampliada!</font>')
                     end
 
                 elseif cmdName == "normalhead" then
                     if character and character:FindFirstChild("Head") then
-                        local head = character.Head
-                        local mesh = head:FindFirstChildOfClass("SpecialMesh")
-                        if mesh then 
-                            mesh.Scale = Vector3.new(1, 1, 1)
-                        else 
-                            head.Size = Vector3.new(2, 1, 1)
-                        end
-                        addLog('<font color="#00FF00">✓ Cabeça restaurada.</font>')
+                        local mesh = character.Head:FindFirstChildOfClass("SpecialMesh")
+                        if mesh then mesh.Scale = Vector3.new(1, 1, 1) else character.Head.Size = Vector3.new(2, 1, 1) end
+                        addLog('<font color="#00FF00">Cabeça restaurada.</font>')
                     end
 
                 elseif cmdName == "jail" then
                     local targetName = args[2]
                     if not targetName then
-                        addLog('<font color="#FF6464">✗ Use: jail &lt;player&gt;</font>')
+                        addLog('<font color="#FF6464">Use: jail <player></font>')
                     else
                         local targetPlayer = nil
                         for _, p in pairs(l_Players:GetPlayers()) do
                             if p.Name:lower():find(targetName:lower()) then targetPlayer = p break end
                         end
                         if createJail(targetPlayer) then
-                            addLog('<font color="#00FF00">✓ Jail criado para ' .. (targetPlayer and targetPlayer.Name or targetName) .. '!</font>')
+                            addLog('<font color="#00FF00">Jail criado para ' .. (targetPlayer and targetPlayer.Name or targetName) .. '!</font>')
                         else
-                            addLog('<font color="#FF6464">✗ Player não encontrado!</font>')
+                            addLog('<font color="#FF6464">Player não encontrado!</font>')
                         end
                     end
 
                 elseif cmdName == "unjail" then
                     local targetName = args[2]
                     if not targetName then
-                        addLog('<font color="#FF6464">✗ Use: unjail &lt;player&gt;</font>')
+                        addLog('<font color="#FF6464">Use: unjail <player></font>')
                     else
                         local targetPlayer = nil
                         for _, p in pairs(l_Players:GetPlayers()) do
                             if p.Name:lower():find(targetName:lower()) then targetPlayer = p break end
                         end
                         if targetPlayer and removeJail(targetPlayer) then
-                            addLog('<font color="#FF6464">✓ Jail removido de ' .. targetPlayer.Name .. '!</font>')
+                            addLog('<font color="#FF6464">Jail removido de ' .. targetPlayer.Name .. '!</font>')
                         else
-                            addLog('<font color="#FF6464">✗ Jail não encontrado!</font>')
+                            addLog('<font color="#FF6464">Jail não encontrado!</font>')
                         end
                     end
 
                 elseif cmdName == "anim" then
                     local animTarget = args[2]
                     if not animTarget then
-                        addLog('<font color="#FF6464">✗ Use: anim &lt;ID&gt; ou anim &lt;player&gt; ou anim stop</font>')
+                        addLog('<font color="#FF6464">Use: anim <ID> ou anim <player> ou anim stop</font>')
                     elseif animTarget:lower() == "stop" then
                         stopAllAnims()
-                        addLog('<font color="#FF6464">✓ Todas as animações paradas!</font>')
+                        addLog('<font color="#FF6464">Todas as animações paradas!</font>')
                     else
                         local animId = tonumber(animTarget)
                         
                         if animId then
                             if playAnim(animId) then
-                                addLog('<font color="#00FF00">✓ Animação ' .. animId .. ' carregada!</font>')
+                                addLog('<font color="#00FF00">Animação ' .. animId .. ' carregada!</font>')
                             else
-                                addLog('<font color="#FF6464">✗ ID inválido ou animação não suportada!</font>')
+                                addLog('<font color="#FF6464">ID inválido ou animação não suportada!</font>')
                             end
                         else
                             local targetChar = nil
@@ -1180,52 +1207,52 @@ TextBox.FocusLost:Connect(function(enter)
                                                 end
                                                 
                                                 if loaded > 0 then
-                                                    addLog('<font color="#00FF00">✓ Animação copiada de ' .. targetChar.Name .. '!</font>')
+                                                    addLog('<font color="#00FF00">Animação copiada de ' .. targetChar.Name .. '!</font>')
                                                 else
-                                                    addLog('<font color="#FF6464">✗ Nenhuma animação válida encontrada!</font>')
+                                                    addLog('<font color="#FF6464">Nenhuma animação válida encontrada!</font>')
                                                 end
                                             else
-                                                addLog('<font color="#FF6464">✗ Personagem sem Humanoid!</font>')
+                                                addLog('<font color="#FF6464">Personagem sem Humanoid!</font>')
                                             end
                                         else
-                                            addLog('<font color="#FF6464">✗ Alvo não está animado no momento!</font>')
+                                            addLog('<font color="#FF6464">Alvo não está animado no momento!</font>')
                                         end
                                     else
-                                        addLog('<font color="#FF6464">✗ Alvo não tem Animator!</font>')
+                                        addLog('<font color="#FF6464">Alvo não tem Animator!</font>')
                                     end
                                 else
-                                    addLog('<font color="#FF6464">✗ Alvo não tem Humanoid!</font>')
+                                    addLog('<font color="#FF6464">Alvo não tem Humanoid!</font>')
                                 end
                             else
-                                addLog('<font color="#FF6464">✗ Player ou modelo não encontrado: ' .. animTarget .. '</font>')
+                                addLog('<font color="#FF6464">Player ou modelo não encontrado: ' .. animTarget .. '</font>')
                             end
                         end
                     end
 
                 elseif cmdName == "stopanim" then
                     stopAllAnims()
-                    addLog('<font color="#FF6464">✓ Todas as animações paradas!</font>')
+                    addLog('<font color="#FF6464">Todas as animações paradas!</font>')
 
                 elseif cmdName == "time" then
                     local timeVal = math.clamp(tonumber(args[2]) or 12, 0, 24)
                     game:GetService("Lighting").TimeOfDay = string.format("%02d:00:00", timeVal)
-                    addLog('<font color="#00FF00">✓ Hora: ' .. timeVal .. 'h</font>')
+                    addLog('<font color="#00FF00">Hora: ' .. timeVal .. 'h</font>')
 
                 elseif cmdName == "brightness" then
                     local b = tonumber(args[2]) or 2
                     game:GetService("Lighting").Brightness = b
-                    addLog('<font color="#00FF00">✓ Brilho: ' .. b .. '</font>')
+                    addLog('<font color="#00FF00">Brilho: ' .. b .. '</font>')
 
                 elseif cmdName == "fog" then
                     local dist = tonumber(args[2]) or 100
                     game:GetService("Lighting").FogEnd = dist
                     game:GetService("Lighting").FogStart = 0
-                    addLog('<font color="#00FF00">✓ Fog: ' .. dist .. ' studs</font>')
+                    addLog('<font color="#00FF00">Fog: ' .. dist .. ' studs</font>')
 
                 elseif cmdName == "unfog" then
                     game:GetService("Lighting").FogEnd = 100000
                     game:GetService("Lighting").FogStart = 0
-                    addLog('<font color="#00FF00">✓ Fog removido!</font>')
+                    addLog('<font color="#00FF00">Fog removido!</font>')
 
                 elseif cmdName == "name" then
                     local newName = args[2] or l_LocalPlayer.Name
@@ -1246,7 +1273,7 @@ TextBox.FocusLost:Connect(function(enter)
                         lbl.TextStrokeTransparency = 0
                         lbl.Font = CONFIG.FONT
                         lbl.TextSize = 18
-                        addLog('<font color="#00FF00">✓ Nome exibido: ' .. newName .. '</font>')
+                        addLog('<font color="#00FF00">Nome exibido: ' .. newName .. '</font>')
                     end
 
                 elseif cmdName == "chat" then
@@ -1258,26 +1285,26 @@ TextBox.FocusLost:Connect(function(enter)
                             local sayMsg = chatEvents:FindFirstChild("SayMessageRequest")
                             if sayMsg then pcall(function() sayMsg:FireServer(msg, "All") end) end
                         end
-                        addLog('<font color="#00FF00">✓ Mensagem enviada!</font>')
+                        addLog('<font color="#00FF00">Mensagem enviada!</font>')
                     end
 
                 elseif cmdName == "zoom" then
                     local zoomVal = tonumber(args[2]) or 400
                     l_LocalPlayer.CameraMaxZoomDistance = zoomVal
-                    addLog('<font color="#00FF00">✓ Zoom máximo: ' .. zoomVal .. '</font>')
+                    addLog('<font color="#00FF00">Zoom máximo: ' .. zoomVal .. '</font>')
 
                 elseif cmdName == "freeze" then
                     if character and character:FindFirstChild("HumanoidRootPart") then
                         character.HumanoidRootPart.Anchored = true
                         if humanoid then humanoid.WalkSpeed = 0 humanoid.JumpPower = 0 end
-                        addLog('<font color="#FF6464">✓ Personagem congelado!</font>')
+                        addLog('<font color="#FF6464">Personagem congelado!</font>')
                     end
 
                 elseif cmdName == "unfreeze" then
                     if character and character:FindFirstChild("HumanoidRootPart") then
                         character.HumanoidRootPart.Anchored = false
                         if humanoid then humanoid.WalkSpeed = 16 humanoid.JumpPower = 50 end
-                        addLog('<font color="#00FF00">✓ Personagem descongelado!</font>')
+                        addLog('<font color="#00FF00">Personagem descongelado!</font>')
                     end
 
                 elseif cmdName == "platform" then
@@ -1290,17 +1317,17 @@ TextBox.FocusLost:Connect(function(enter)
                         platformPart.CFrame = character.HumanoidRootPart.CFrame - Vector3.new(0, 3, 0)
                         platformPart.BrickColor = BrickColor.new("Bright blue")
                         platformPart.Material = Enum.Material.SmoothPlastic
-                        addLog('<font color="#00FF00">✓ Plataforma criada!</font>')
+                        addLog('<font color="#00FF00">Plataforma criada!</font>')
                     end
 
                 elseif cmdName == "unplatform" then
                     if platformPart then platformPart:Destroy() platformPart = nil end
-                    addLog('<font color="#FF6464">✓ Plataforma removida!</font>')
+                    addLog('<font color="#FF6464">Plataforma removida!</font>')
 
                 elseif cmdName == "attachcam" then
                     local targetName = args[2]
                     if not targetName then
-                        addLog('<font color="#FF6464">✗ Use: attachcam &lt;player&gt;</font>')
+                        addLog('<font color="#FF6464">Use: attachcam <player></font>')
                     else
                         local targetPlayer = nil
                         for _, p in pairs(l_Players:GetPlayers()) do
@@ -1314,42 +1341,34 @@ TextBox.FocusLost:Connect(function(enter)
                                     l_Camera.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 5, 12)
                                 end
                             end)
-                            addLog('<font color="#00FF00">✓ Câmera anexada a ' .. targetPlayer.Name .. '!</font>')
+                            addLog('<font color="#00FF00">Câmera anexada a ' .. targetPlayer.Name .. '!</font>')
                         else
-                            addLog('<font color="#FF6464">✗ Player não encontrado!</font>')
+                            addLog('<font color="#FF6464">Player não encontrado!</font>')
                         end
                     end
 
                 elseif cmdName == "detachcam" then
                     if attachCamConnection then attachCamConnection:Disconnect() attachCamConnection = nil end
                     l_Camera.CameraType = Enum.CameraType.Custom
-                    addLog('<font color="#00FF00">✓ Câmera retornada ao normal!</font>')
+                    addLog('<font color="#00FF00">Câmera retornada ao normal!</font>')
 
                 elseif cmdName == "rainbow" then
-                    if rainbowConnection then 
-                        rainbowConnection:Disconnect() 
-                        rainbowConnection = nil
-                        addLog('<font color="#FF6464">✗ Rainbow DESATIVADO!</font>')
-                    else
-                        rainbowConnection = l_RunService.Heartbeat:Connect(function()
-                            local char = l_LocalPlayer.Character
-                            if not char then return end
-                            local hue = tick() % 5 / 5
-                            for _, part in pairs(char:GetDescendants()) do
-                                if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
-                                    part.Color = Color3.fromHSV(hue, 1, 1)
-                                end
+                    if rainbowConnection then rainbowConnection:Disconnect() end
+                    rainbowConnection = l_RunService.Heartbeat:Connect(function()
+                        local char = l_LocalPlayer.Character
+                        if not char then return end
+                        local hue = tick() % 5 / 5
+                        for _, part in pairs(char:GetDescendants()) do
+                            if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+                                part.Color = Color3.fromHSV(hue, 1, 1)
                             end
-                        end)
-                        addLog('<font color="#00FF00">✓ Rainbow ATIVADO!</font>')
-                    end
+                        end
+                    end)
+                    addLog('<font color="#00FF00">Rainbow ATIVADO!</font>')
 
                 elseif cmdName == "unrainbow" then
-                    if rainbowConnection then 
-                        rainbowConnection:Disconnect() 
-                        rainbowConnection = nil 
-                    end
-                    addLog('<font color="#FF6464">✗ Rainbow DESATIVADO!</font>')
+                    if rainbowConnection then rainbowConnection:Disconnect() rainbowConnection = nil end
+                    addLog('<font color="#FF6464">Rainbow DESATIVADO!</font>')
 
                 elseif cmdName == "nametag" then
                     local tagText = table.concat(args, " ", 2)
@@ -1371,18 +1390,18 @@ TextBox.FocusLost:Connect(function(enter)
                         lbl.TextStrokeTransparency = 0
                         lbl.Font = CONFIG.FONT
                         lbl.TextSize = 20
-                        addLog('<font color="#00FF00">✓ Nametag: ' .. tagText .. '</font>')
+                        addLog('<font color="#00FF00">Nametag: ' .. tagText .. '</font>')
                     end
 
                 elseif cmdName == "removetag" then
                     local tag = playerGui:FindFirstChild("ConchNameTag")
                     if tag then tag:Destroy() end
-                    addLog('<font color="#FF6464">✓ Nametag removida!</font>')
+                    addLog('<font color="#FF6464">Nametag removida!</font>')
 
                 elseif cmdName == "annoy" then
                     local targetName = args[2]
                     if not targetName then
-                        addLog('<font color="#FF6464">✗ Use: annoy &lt;player&gt;</font>')
+                        addLog('<font color="#FF6464">Use: annoy <player></font>')
                     else
                         local targetPlayer = nil
                         for _, p in pairs(l_Players:GetPlayers()) do
@@ -1397,30 +1416,30 @@ TextBox.FocusLost:Connect(function(enter)
                                     myChar.HumanoidRootPart.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame
                                 end
                             end)
-                            addLog('<font color="#00FF00">✓ Seguindo ' .. targetPlayer.Name .. '!</font>')
+                            addLog('<font color="#00FF00">Seguindo ' .. targetPlayer.Name .. '!</font>')
                         else
-                            addLog('<font color="#FF6464">✗ Player não encontrado!</font>')
+                            addLog('<font color="#FF6464">Player não encontrado!</font>')
                         end
                     end
 
                 elseif cmdName == "unannoy" then
                     if annoyConnection then annoyConnection:Disconnect() annoyConnection = nil end
-                    addLog('<font color="#FF6464">✓ Parou de seguir!</font>')
+                    addLog('<font color="#FF6464">Parou de seguir!</font>')
 
                 elseif cmdName == "reach" then
                     local reachVal = tonumber(args[2]) or 10
                     local tool = character and character:FindFirstChildOfClass("Tool")
                     if tool and tool:FindFirstChild("Handle") then
                         tool.Handle.Size = Vector3.new(reachVal, 0.1, 0.1)
-                        addLog('<font color="#00FF00">✓ Reach: ' .. reachVal .. '</font>')
+                        addLog('<font color="#00FF00">Reach: ' .. reachVal .. '</font>')
                     else
-                        addLog('<font color="#FF6464">✗ Segure uma ferramenta primeiro!</font>')
+                        addLog('<font color="#FF6464">Segure uma ferramenta primeiro!</font>')
                     end
 
                 elseif cmdName == "morph" then
                     local morphTarget = args[2]
                     if not morphTarget then
-                        addLog('<font color="#FF6464">✗ Use: morph &lt;ID da roupa&gt; ou morph &lt;player&gt;</font>')
+                        addLog('<font color="#FF6464">Use: morph <ID da roupa> ou morph <player></font>')
                     else
                         local targetPlayer = nil
                         for _, p in pairs(l_Players:GetPlayers()) do
@@ -1432,29 +1451,29 @@ TextBox.FocusLost:Connect(function(enter)
                         
                         if targetPlayer then
                             if applyMorph(nil, targetPlayer) then
-                                addLog('<font color="#00FF00">✓ Morph aplicado de ' .. targetPlayer.Name .. ' com acessórios!</font>')
+                                addLog('<font color="#00FF00">Morph aplicado de ' .. targetPlayer.Name .. ' com acessórios!</font>')
                             else
-                                addLog('<font color="#FF6464">✗ Falha ao copiar o visual!</font>')
+                                addLog('<font color="#FF6464">Falha ao copiar o visual!</font>')
                             end
                         else
                             local assetId = tonumber(morphTarget)
                             if assetId then
                                 if applyMorph(assetId) then
-                                    addLog('<font color="#00FF00">✓ Morph aplicado com ID: ' .. assetId .. '!</font>')
+                                    addLog('<font color="#00FF00">Morph aplicado com ID: ' .. assetId .. '!</font>')
                                 else
-                                    addLog('<font color="#FF6464">✗ Falha ao aplicar morph!</font>')
+                                    addLog('<font color="#FF6464">Falha ao aplicar morph!</font>')
                                 end
                             else
-                                addLog('<font color="#FF6464">✗ Player ou ID inválido!</font>')
+                                addLog('<font color="#FF6464">Player ou ID inválido!</font>')
                             end
                         end
                     end
 
                 else
-                    addLog('<font color="#FF6464">✗ Comando desconhecido: ' .. cmdName .. '</font>')
+                    addLog('Command execution processed.', CONFIG.TEXT_NORMAL)
                 end
             else
-                addLog('<font color="#FF6464">✗ O comando "' .. cmdName .. '" não existe.</font>')
+                addLog('The command "' .. cmdName .. '" does not exist.', Color3.fromRGB(255, 80, 80))
             end
         end)
         TextBox.Text = ""
@@ -1463,18 +1482,14 @@ end)
 
 local function toggleUI()
     Container.Visible = not Container.Visible
-    if Container.Visible then 
-        TextBox:CaptureFocus()
-    end
+    if Container.Visible then TextBox:CaptureFocus() end
 end
 
 ToggleButton.MouseButton1Click:Connect(toggleUI)
 l_UserInputService.InputBegan:Connect(function(input, gpe)
-    if not gpe and input.KeyCode == Enum.KeyCode.X then 
-        toggleUI()
-    end
+    if not gpe and input.KeyCode == Enum.KeyCode.X then toggleUI() end
 end)
 
-print("✓ Delta Conch Hub carregado com sucesso!")
+print("✓ Delta Conch Hub carregado com sucesso.")
 print("✓ Botão >_ no canto superior esquerdo")
-print("✓ Pressione X para abrir/fechar")
+print("✓ Sugestões com comando em azul e descrição em branco")
